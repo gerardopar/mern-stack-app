@@ -15,6 +15,8 @@ const validateLoginInput = require('../../validation/login');
 //load user model
 const User = require('../../models/User');
 
+// - - - - - - - - - - - - - - - - - - - - - - 
+
 // @route   GET api/users/test
 // @desc    Tests users route
 // @access  Public
@@ -40,7 +42,7 @@ router.post('/register', (req, res) => {
                 errors.email = 'Email already exists';
                 return res.status(400).json(errors.email); //return an error if the email already exists
             } else { //creates a new user if the email does not exist
-                
+
                 const avatar = gravatar.url(req.body.email, { //creates an avatar based on the user email
                     s: '200', //size
                     r: 'pg',  //rating
@@ -65,7 +67,7 @@ router.post('/register', (req, res) => {
                     });
                 });
             }
-        })
+        });
 });
 
 // @route   GET api/users/login

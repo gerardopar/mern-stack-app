@@ -9,6 +9,8 @@ const users = require('./routes/api/users');
 const profile = require('./routes/api/profile');
 const posts = require('./routes/api/posts');
 
+// - - - - - - - - - - - - - - - - - - - - - - 
+
 //initializing express
 const app = express();
 
@@ -36,6 +38,11 @@ app.use('/api/profile', profile);
 app.use('/api/posts', posts);
 
 //setting up port
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 //setting up the server
 app.listen(port, () => console.log(`Server is up on port ${port}`));
+
+//150 chars No matter how hard the task is, 
+//I will find a solution to that problem. 
+//Even if it takes learning a new technology, 
+//tool, or tons of documentation.

@@ -7,6 +7,8 @@ const User = mongoose.model('users');
 // importing secret key
 const keys = require('../config/keys');
 
+// - - - - - - - - - - - - - - - - - - - - - - 
+
 // options object
 const opts = {};
 opts.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
